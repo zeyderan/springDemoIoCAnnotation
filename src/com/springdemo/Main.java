@@ -9,9 +9,9 @@ public class Main {
 		//IoCConfig.class içerisindeki ayarlarý geçerli kýl
 		AnnotationConfigApplicationContext context = 
 				new AnnotationConfigApplicationContext(IoCConfig.class);
-		ICustomerDal customerDal = context.getBean("database", ICustomerDal.class);
+		ICustomerService customerService = context.getBean("service", ICustomerService.class);
 		
-		customerDal.add();
+		customerService.add();
 
 	}
 	
