@@ -1,9 +1,11 @@
 package com.springdemo;
 
+import org.springframework.beans.factory.annotation.Value;
 
 //oracle veritabaný içi crud iþlemleri
 
 public class CustomerDalOracle implements ICustomerDal {
+	@Value("${database.connectionString}")
 	String connectionString;
 	public String getConnectionString() {
 		return connectionString;
